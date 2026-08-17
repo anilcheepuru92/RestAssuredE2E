@@ -26,9 +26,15 @@ public class GoogleGeminiPromptTest extends BaseTest {
 				+ "      }\r\n"
 				+ "    ]\r\n"
 				+ "  }";
-		
+				
 		String apiKey = System.getenv("GEMINI_API_KEY");
-		
+
+		if (apiKey == null || apiKey.isBlank()) {
+		    throw new IllegalStateException(
+		        "GEMINI_API_KEY environment variable is not set"
+		    );
+		}
+
 		ConfigManager.set("api_key", apiKey);
 		
 		Response response = restClient.post(BASE_URL_GOOGLE_GEMINI, GOOGLE_GEMINI_ENDPOINT, requestBody, null, null, AuthType.API_KEY, ContentType.JSON, false);
