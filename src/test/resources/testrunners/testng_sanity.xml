@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="API Regression Test Suite" verbose="4">
+
+
+	<listeners>
+		<listener class-name="com.aventstack.chaintest.plugins.ChainTestListener" />
+		<!-- <listener class-name="com.qa.api.listeners.AnnotationTransformer" /> -->
+	</listeners>
+
+	<!-- GoRest APIs -->
+	<test name="Go Rest API Test - Get User">
+		<classes>
+			<class name="com.qa.api.gorest.tests.GetUserTest" />
+		</classes>
+	</test>
+	
+
+	<!-- FakeProduct APIs -->
+	<!-- <test name="Product API Test - Get Product">
+		<classes>
+			<class name="com.qa.api.products.tests.GetProductsTest" />
+		</classes>
+	</test>
+
+
+	Schema validations
+	<test name="Schema Test">
+		<classes>
+			<class name="com.qa.api.schemavalidation.tests.GoRestSchemaTest" />
+		</classes>
+	</test> -->
+
+</suite>	
