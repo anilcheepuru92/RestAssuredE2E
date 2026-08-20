@@ -17,19 +17,19 @@
 	</test>
 	
 
-	<!-- FakeProduct APIs -->
-	<!-- <test name="Product API Test - Get Product">
+	<!--  FakeProduct APIs -->
+	<test name="Product API Test - Get Product">
 		<classes>
 			<class name="com.qa.api.products.tests.GetProductsTest" />
 		</classes>
 	</test>
 
 
-	Schema validations
+	<!-- Schema validations -->
 	<test name="Schema Test">
 		<classes>
 			<class name="com.qa.api.schemavalidation.tests.GoRestSchemaTest" />
 		</classes>
-	</test> -->
+	</test>
 
 </suite>	
